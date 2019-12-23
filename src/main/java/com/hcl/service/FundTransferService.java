@@ -7,4 +7,6 @@ import com.hcl.exception.LowBalanceException;
 public interface FundTransferService {
 
 	public ResponseDto transfer(FundTransferDto fundTransferDto)throws LowBalanceException;
+	
+	public List<Transactions> getTransactions() throws NoTransactionsException;
 }
