@@ -12,5 +12,7 @@ public class FundUtil {
 	public static final String  TRANSACTION_SUCCESS ="Successfull Transaction";
 	
 	public static final String INSUFFICIENT_BALANCE ="Insufficient balanace";
+	
+	public static final String NO_TRANSACTION_AVAILABLE ="No transactions";
 
 }
