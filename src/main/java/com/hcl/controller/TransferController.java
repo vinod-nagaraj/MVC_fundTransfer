@@ -24,7 +24,7 @@ public ResponseEntity<ResponseDto> transfer(FundTransferDto fundTransferDto)thro
 		
 		return new ResponseEntity<ResponseDto>(fundTransferService.transfer(fundTransferDto), HttpStatus.CREATED);
 	}
-	@RequestMapping(value = "get" , method = RequestMethod.GET) 
+	@RequestMapping(value = "getalltransactions" , method = RequestMethod.GET) 
 		
 		public List<Transactions> getTransactions() throws NoTransactionsException {
 			
