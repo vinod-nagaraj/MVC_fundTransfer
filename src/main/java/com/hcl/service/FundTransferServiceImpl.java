@@ -19,5 +19,11 @@ public class FundTransferServiceImpl implements FundTransferService {
 		return fundTransferDao.transfer(fundTransferDto);
 				
 	}
+	
+	
+	public List<Transactions> getTransactions() throws NoTransactionsException {
+
+		return fundTransferDao.getTransactions();
+	}
 
 }
