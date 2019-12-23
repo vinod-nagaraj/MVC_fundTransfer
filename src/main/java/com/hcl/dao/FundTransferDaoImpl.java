@@ -67,6 +67,16 @@ public class FundTransferDaoImpl implements FundTransferDao {
 		} 
 		throw new LowBalanceException(FundUtil.INSUFFICIENT_BALANCE);
 		
-	}
+		public List<Transactions> getTransactions() throws NoTransactionsException {
+		
+			@SuppressWarnings("unchecked")
+			List <Transactions> list = getSession().createCriteria(Transactions.class).list();
+			if(list.equals(null)) {
+				throw new NoTransactionsException(FundUtil.NO_TRANSACTION_AVAILABLE);
+			}
+			return list;
+	
+			
+		}
 	
 }		
